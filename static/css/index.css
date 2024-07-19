@@ -1,0 +1,57 @@
+header {
+  background-image: url("../assets/header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 2rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+input[type="file"] {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #333;
+}

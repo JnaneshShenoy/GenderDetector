@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Detection</title>
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='css/index.css') }}"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5">
+        <h2 class="fw-bolder mb-4">Upload Image</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" accept=".jpg, .jpeg" />
+          <input type="submit" value="Upload" />
+        </form>
+        {% if img_path %}
+        <h2 class="fw-bolder mb-4">Uploaded Image</h2>
+        <img
+          src="{{ url_for('static', filename='uploads/' + img_path.split('/')[-1]) }}"
+          alt="Uploaded Image"
+        />
+        <h3 class="fw-bolder mb-4">Detected Gender: {{ gender }}</h3>
+        {% endif %}
+      </div>
+    </section>
+  </body>
+</html>
